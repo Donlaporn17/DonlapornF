@@ -1,0 +1,107 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: Arial, "Tahoma", sans-serif;
+    background: plum;
+    color: rgb(0, 0, 0);
+    line-height: 1.6;
+}
+nav{
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background: rgb(188, 44, 245);
+    padding: 15px 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+nav .logo{
+    color: aliceblue;
+    font-size: 24px;
+    font-weight: bold;
+}
+ul{
+    list-style: none;
+    display: flex;
+    gap: 30px;
+}
+nav ul li a{
+    color: aliceblue;
+    text-decoration: none;
+    font-weight: bold;
+}
+nav ul li a:hover{
+    color: rgb(119, 192, 255);
+}
+.hero{
+    width: 80%;
+    max-width: 1100px;
+    margin: 40px auto;
+    min-height: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 50px;
+    padding: 60px;
+    background: linear-gradient(rgb(255, 113, 255),rgb(168, 67, 168));
+    border-radius: 25px;
+    color: aliceblue;
+}
+.hero-text{
+    flex: 1;
+}
+.hero-text h1{
+    font-size: 48px;
+    margin-bottom: 15px;
+}
+.hero-text h2{
+     font-size: 25px;
+    margin-bottom: 20px;
+}
+.hero-text p{
+    font-size: 18px;
+    margin-bottom: 25px;
+}
+.profile{
+    flex: 0 0 280px;
+    height: 280px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 8px solid white;
+    background: #dbeafe;
+}
+.profile img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.btn{
+    display: inline-block;
+    padding: 12px 25px;
+    background: white;
+    color: #0d6efd;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: bold;
+}
+h3{
+    color: rgb(255, 255, 255);
+    font-size: 35px;
+}
+img{
+    width: 450px;
+    height: 450px;
+}
+#hero2{
+    max-width: 1200px;
+    margin: 80pc auto;
+    padding: 0 30px;
+}
+.About{
+    position: relative;
+    background-color: aliceblue;
+}

@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DONLAPORN | Portfolio</title>
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;600;700&display=swap');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Kanit', sans-serif;
+  background: linear-gradient(135deg, #f8d9fa, #e7b9ee, #d8a3e6);
+  color: #5b2878;
+}
+
+/* ===== Navbar ===== */
+nav {
+  background: linear-gradient(90deg, #a820e8, #c02ee8, #a820e8);
+  color: white;
+  padding: 18px 5%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  box-shadow: 0 4px 15px #8d27b855;
+}
+
+.logo {
+  font-size: 30px;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+  gap: 28px;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+  transition: .3s;
+}
+
+nav a:hover {
+  color: #ffe1ff;
+}
+
+/* ===== Hero ===== */
+.hero {
+  max-width: 1100px;
+  margin: 35px auto;
+  padding: 55px;
+  border-radius: 28px;
+  background: linear-gradient(135deg, #f35bea, #bd48c7);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+  color: white;
+  box-shadow: 0 12px 30px #9c3aaa55;
+  overflow: hidden;
+}
+
+.hero-text {
+  flex: 1;
+}
+
+.hero h1 {
+  font-size: clamp(35px, 5vw, 58px);
+  margin-bottom: 12px;
+  text-shadow: 3px 3px #8b309a;
+}
+
+.hero h2 {
+  font-size: 25px;
+  margin-bottom: 10px;
+}
+
+.hero p {
+  font-size: 18px;
+  line-height: 1.8;
+}
+
+.hero button {
+  margin-top: 25px;
+  padding: 13px 25px;
+  border: none;
+  border-radius: 30px;
+  background: white;
+  color: #a528c7;
+  font-family: inherit;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: .3s;
+}
+
+.hero button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 18px #72208055;
+}
+
+.profile-img {
+  width: 260px;
+  height: 260px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 8px solid white;
+  box-shadow: 0 0 0 8px #ffffff44;
+}
+
+/* ===== Sections ===== */
+section {
+  max-width: 850px;
+  margin: 45px auto;
+  padding: 0 25px;
+  text-align: center;
+}
+
+.section-title {
+  font-size: 32px;
+  color: white;
+  margin-bottom: 20px;
+  text-shadow: 2px 2px #e344ff;
+}
+
+.section-title::after {
+  content: "";
+  display: block;
+  width: 70px;
+  height: 4px;
+  background: #d044e9;
+  border-radius: 5px;
+  margin: 8px auto;
+}
+
+.card {
+  background: #ffffffd9;
+  padding: 28px;
+  border-radius: 20px;
+  box-shadow: 0 8px 20px #9d55aa33;
+  line-height: 2;
+  font-size: 17px;
+  transition: .3s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+/* ===== Skills ===== */
+.skills {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 15px;
+}
+
+.skill {
+  background: linear-gradient(135deg, #ffffff, #ffffff);
+  padding: 22px 10px;
+  border-radius: 18px;
+  font-weight: 500;
+  box-shadow: 0 5px 12px #d465ff33;
+  transition: .3s;
+}
+
+.skill:hover {
+  transform: translateY(-6px) scale(1.03);
+  background: #fff;
+}
+
+.skill .icon {
+  font-size: 35px;
+  display: block;
+  margin-bottom: 8px;
+}
+
+/* ===== Footer ===== */
+footer {
+  margin-top: 60px;
+  padding: 25px;
+  text-align: center;
+  background: #a92bc9;
+  color: white;
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 768px) {
+  nav {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  nav ul {
+    gap: 14px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .hero {
+    margin: 20px;
+    padding: 35px 25px;
+    flex-direction: column-reverse;
+    text-align: center;
+  }
+
+  .profile-img {
+    width: 190px;
+    height: 190px;
+  }
+
+  .hero h2 {
+    font-size: 21px;
+  }
+
+  .hero p {
+    font-size: 16px;
+  }
+
+  .skills {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+</style>
+</head>
+
+<body>
+
+<!-- ===== Navbar ===== -->
+<nav>
+  <div class="logo"> DONLAPORN</div>
+  <ul>
+    <li><a href="#home">🏠 ประวัติ</a></li>
+    <li><a href="#skills">🧩 ทักษะ</a></li>
+    <li><a href="#works">📚 ผลงาน</a></li>
+    <li><a href="#certificate">📜 ใบประกาศ</a></li>
+    <li><a href="#activity">🎨 งานอดิเรก</a></li>
+    <li><a href="#contact">📩 ติดต่อ</a></li>
+  </ul>
+</nav>
+
+<!-- ===== Hero ===== -->
+<section class="hero" id="home">
+  <div class="hero-text">
+    <h1>สวัสดีค่ะ 🙏</h1>
+    <h2>ดิฉันนางสาวดลพร โคตรประทุม</h2>
+    <p>
+      นักเรียนระดับชั้น ปวช.2<br>
+      วิทยาลัยอาชีวศึกษาอุบลราชธานี
+    </p>
+    <button onclick="document.getElementById('about').scrollIntoView()">
+      👤 รู้จักฉันมากขึ้น! →
+    </button>
+  </div>
+
+  <!-- เปลี่ยน profile.jpg เป็นรูปของคุณ -->
+  <img src="IMG/4.jpg" alt="รูปโปรไฟล์" class="profile-img">
+</section>
+
+<!-- ===== About ===== -->
+<section id="about">
+  <h2 class="section-title">🌸 ประวัติส่วนตัว 🌸</h2>
+  <div class="card">
+    สวัสดีค่ะ 🙏 ดิฉันนางสาวดลพร โคตรประทุม<br>
+    อยู่ระดับชั้น ปวช.2 สาขาเทคโนโลยีธุรกิจดิจิทัล<br>
+    ฉันชอบเที่ยว ชอบกิน ชอบทำความสะอาด<br>
+    ฉันเป็นคนร่าเริง เข้ากับคนง่าย และไม่เครียด
+  </div>
+</section>
+
+<!-- ===== Skills ===== -->
+<section id="skills">
+  <h2 class="section-title">✨ ทักษะ ✨</h2>
+  <div class="skills">
+    <div class="skill">
+      <span class="icon">😎</span>
+      เต้นแอโรบิค<br>และรำเกษียร
+    </div>
+    <div class="skill">
+      <span class="icon">🎶</span>
+      เเข่งร้องประสานเสียง<br>และทำป้ายจากโฟม
+    </div>
+    <div class="skill">
+      <span class="icon">🏸</span>
+      แบตมินตัน<br>และเล่นวอลเลย์บอล
+    </div>
+    <div class="skill">
+      <span class="icon">💬</span>
+      เป่าเมโรเดียน<br>และการทำงานเป็นทีม
+    </div>
+  </div>
+</section>
+
+<!-- ===== Other Sections ===== -->
+<section id="works">
+  <h2 class="section-title">📚 ผลงาน</h2>
+  <div class="card">ฉันเคยเต้นแอโรบิคได้รางวัลที่1 จากการเต้นแอโรบิค ✨</div>
+</section>
+
+<section id="certificate">
+  <h2 class="section-title">📜 ใบประกาศ</h2>
+  <div class="card">แข่งขันแอโรบิค
+    <br><img src="IMG/5.jpg" width="200px" height="200px">
+    <br><img src="IMG/6.jpg" width="200px" height="200px">
+    <br><img src="IMG/7.jpg" width="200px" height="200px"> <br>
+    🏆</div>
+</section>
+
+<section id="activity">
+  <h2 class="section-title">🎨 งานอดิเรก</h2>
+  <div class="card">✨ทำความสะอาด
+    <br>📺ดูหนัง ฟังเพลง
+    <br>🔨ช่วยงานพ่อแม่ </div>
+</section>
+
+<section id="contact">
+  <h2 class="section-title">📩 ติดต่อ</h2>
+  <div class="card">
+    📧 Email: aum17082009@gmail.com<br>
+    📱  Facebook: ดลพร .ฯ<br>
+    🎄  LINE: ดลพร .ฯ<br>
+    📞  contact: 094-592-9397
+  </div>
+</section>
+
+<footer>
+  © 2026 DONLAPORN | My Portfolio 💗
+</footer>
+
+</body>
+</html>
